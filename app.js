@@ -1,49 +1,49 @@
-// Function to fetch data and populate the table
+
 function showHotcoffee() {
-    // API URL
+    
     const apiUrl = 'https://api.sampleapis.com/coffee/hot';
   
-    // Fetch data from the API
+    
     fetch(apiUrl)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.json(); // Parse JSON data
+        return response.json(); 
       })
       .then(coffees => {
-        const table = document.getElementById('hotCoffeeTable'); // Get the table by its ID
+        const table = document.getElementById('hotCoffeeTable'); 
   
-        // Loop through each coffee item and create a table row for it
+        
         coffees.forEach(coffee => {
-          // Create a new table row
+          
           const row = document.createElement('tr');
   
-          // Create table cells for Title, Description, Ingredients, and Image
+          
           const titleCell = document.createElement('td');
           const descriptionCell = document.createElement('td');
           const ingredientsCell = document.createElement('td');
           const imageCell = document.createElement('td');
   
-          // Populate the cells with coffee data
+          
           titleCell.textContent = coffee.title;
           descriptionCell.textContent = coffee.description;
-          ingredientsCell.textContent = coffee.ingredients.join(', '); // Join the array of ingredients into a string
+          ingredientsCell.textContent = coffee.ingredients.join(', '); 
   
-          // Create an image element for the image cell
+          
           const img = document.createElement('img');
           img.src = coffee.image;
           img.alt = coffee.title;
-          img.style.width = '100px'; // Set a width for the image
-          imageCell.appendChild(img); // Append the image to the cell
+          img.style.width = '100px'; 
+          imageCell.appendChild(img); 
   
-          // Append all cells to the row
+        
           row.appendChild(titleCell);
           row.appendChild(descriptionCell);
           row.appendChild(ingredientsCell);
           row.appendChild(imageCell);
   
-          // Append the row to the table
+          
           table.appendChild(row);
         });
       })
@@ -56,52 +56,52 @@ function showHotcoffee() {
 
   
 
-  // Function to fetch data and populate the table
+  
 function showColdcoffee() {
-    // API URL
+    
     const apiUrl = 'https://api.sampleapis.com/coffee/iced';
   
-    // Fetch data from the API
+    
     fetch(apiUrl)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.json(); // Parse JSON data
+        return response.json(); 
       })
       .then(coffees => {
-        const table = document.getElementById('coldCoffeeTable'); // Get the table by its ID
+        const table = document.getElementById('coldCoffeeTable'); 
   
-        // Loop through each coffee item and create a table row for it
+        
         coffees.forEach(coffee => {
-          // Create a new table row
+          
           const row = document.createElement('tr');
   
-          // Create table cells for Title, Description, Ingredients, and Image
+          
           const titleCell = document.createElement('td');
           const descriptionCell = document.createElement('td');
           const ingredientsCell = document.createElement('td');
           const imageCell = document.createElement('td');
   
-          // Populate the cells with coffee data
+        
           titleCell.textContent = coffee.title;
           descriptionCell.textContent = coffee.description;
-          ingredientsCell.textContent = coffee.ingredients.join(', '); // Join the array of ingredients into a string
+          ingredientsCell.textContent = coffee.ingredients.join(', '); 
   
-          // Create an image element for the image cell
+          
           const img = document.createElement('img');
           img.src = coffee.image;
           img.alt = coffee.title;
-          img.style.width = '100px'; // Set a width for the image
-          imageCell.appendChild(img); // Append the image to the cell
+          img.style.width = '100px'; 
+          imageCell.appendChild(img); 
   
-          // Append all cells to the row
+          
           row.appendChild(titleCell);
           row.appendChild(descriptionCell);
           row.appendChild(ingredientsCell);
           row.appendChild(imageCell);
   
-          // Append the row to the table
+          
           table.appendChild(row);
         });
       })
@@ -114,7 +114,7 @@ function showColdcoffee() {
   }
 
   
-  // Function to show the menu options
+  
   function showMenu() {
     document.getElementById('menuOptions').style.display = 'block';
 }
