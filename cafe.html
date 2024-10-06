@@ -7,26 +7,21 @@
         
 
     <style>
-        /*body style*/
+        
       body      {
-                  
-                        /* background-color:#bc285c3c;*/  /*background color ( brown)*/  
-                         /*color:rgba(0, 0, 0, 0.313);*/  /*font color (black)*/
-                        text-align: center; /*center heading*/
-                             
-                              }
-            /*heading (h1) styles*/
+                  text-Align: center;
+      }   
             h1{
-                font-size: 48px;   /*font size*/
-                background-color: #6b4226; /*coffee brown background color*/  
-                color: white; /*font color*/
+                font-size: 48px;   
+                background-color: #6b4226; 
+                color: white; 
 
                 padding: 20px;
-                border-radius: 50px; /*rounded edge*/
+                border-radius: 50px; 
 
             }
             
-            /* button styles*/
+            
         .menu-btn {
             margin: 10px;
             padding: 15px 25px;
@@ -36,7 +31,7 @@
             cursor: Pointer;
             Font-size: 18px;
         }
-        /*menu display section*/
+        
         .menu-options {
             display:none;
             margin-top: 20px;
@@ -48,7 +43,7 @@
 
 
         }
-        /*coffee type section*/
+        
         .coffee-types{
             display:none;
             margin-top: 20px;
@@ -73,18 +68,18 @@
         </head>
       <body>  
         <script src="./app.js"></script>
-     <!-- Heading -->
+     
      <h1>Coffee Shop </h1>
-     <!-- Menu Button -->
+     
      <button class="menu-btn" id="menuButton" onclick="showMenu()">Show Menu</button>
  
-     <!-- Coffee Menu Options -->
+
      <div class="menu-options" id="menuOptions">
          <button onclick="showHotcoffee()">Hot Coffee</button>
          <button onclick="showColdcoffee()">Cold Coffee</button>
      </div>
  
-     <!-- Coffee Types for Hot Coffee -->
+     
      <div class="coffee-types" id="Hot coffee options">
          <h2>Hot Coffee options </h2>
          <table  id="hotCoffeeTable">
@@ -98,7 +93,7 @@
          </table>
      </div>
  
-     <!-- Coffee Types for Cold Coffee -->
+     
      <div class="coffee-types" id="Cold coffee options">
          <h2>Cold coffee options</h2>
          <table id="coldCoffeeTable">
